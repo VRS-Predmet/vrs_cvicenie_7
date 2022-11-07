@@ -3,3 +3,5 @@
 /CMakeLists.txt
 /CMakeLists_template.txt
 /cmake-build-debug/
+/.idea
+/adc_Debug.launch
