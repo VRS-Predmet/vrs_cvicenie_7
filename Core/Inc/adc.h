@@ -41,8 +41,8 @@ void MX_ADC1_Init(void);
 /* USER CODE BEGIN Prototypes */
 uint8_t Start_ADC_Conversion(void);
 
-double valtage[ADC_DMA_BUFFER_SIZE];
-uint16_t adcConvertedDataBuffer[ADC_DMA_BUFFER_SIZE];
+extern double valtage[ADC_DMA_BUFFER_SIZE];
+extern uint16_t adcConvertedDataBuffer[ADC_DMA_BUFFER_SIZE];
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

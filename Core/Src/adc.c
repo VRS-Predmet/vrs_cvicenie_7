@@ -21,7 +21,8 @@
 #include "adc.h"
 
 /* USER CODE BEGIN 0 */
-//uint16_t adcConvertedDataBuffer[ADC_DMA_BUFFER_SIZE];
+uint16_t adcConvertedDataBuffer[ADC_DMA_BUFFER_SIZE];
+double valtage[ADC_DMA_BUFFER_SIZE];
 /* USER CODE END 0 */
 
 /* ADC1 init function */
@@ -81,6 +82,7 @@ void MX_ADC1_Init(void)
   LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_1);
 
   /* USER CODE END ADC1_Init 1 */
+
   /** Common config
   */
   ADC_InitStruct.Resolution = LL_ADC_RESOLUTION_12B;
@@ -113,10 +115,11 @@ void MX_ADC1_Init(void)
   {
     wait_loop_index--;
   }
+
   /** Configure Regular Channel
   */
   LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_1, LL_ADC_CHANNEL_1);
-  LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_1, LL_ADC_SAMPLINGTIME_19CYCLES_5);
+  LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_1, LL_ADC_SAMPLINGTIME_1CYCLE_5);
   LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_1, LL_ADC_SINGLE_ENDED);
   /* USER CODE BEGIN ADC1_Init 2 */
 
