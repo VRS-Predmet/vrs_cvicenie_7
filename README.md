@@ -37,5 +37,14 @@
 
 - výsledok prevodu ADC1 je DMA kontrolérom ukladaný do vyhradenej pamäti
 - DMA generuje prerušnie "HT" a "TC"
-- v prerušení sa výsledok konverzie prevedie na hodnotu reprezentujúcu merané napätie (0 - 3v3)
+- v prerušení sa výsledok A/D konverzie prevedie na hodnotu reprezentujúcu napäťovú úroveň (0 - 3v3)
+
+<p align="center">
+    <img src="https://github.com/VRS-Predmet/vrs_cvicenie_7/blob/master/images/v_meas_calc.PNG" width="400">
+</p>
+
 - v prípade, že maximálna úroveň meraného napätia presahuje úroveň referenčného, tak výpočet je potrebné patrične prispôsobiť 
+
+<p align="center">
+    <img src="https://github.com/VRS-Predmet/vrs_cvicenie_7/blob/master/images/code_sample.PNG" width="900">
+</p>
