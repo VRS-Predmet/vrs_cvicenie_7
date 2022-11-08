@@ -33,7 +33,8 @@ extern "C" {
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-#define ADC_DMA_BUFFER_SIZE		50
+#define ADC_DMA_BUFFER_SIZE			50
+#define VOLTAGE_DIVIDER_CONSTANT	2.154228855721393f
 /* USER CODE END Private defines */
 
 void MX_ADC1_Init(void);

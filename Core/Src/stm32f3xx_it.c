@@ -209,7 +209,7 @@ void DMA1_Channel1_IRQHandler(void)
 	{
 		for(int i = 0; i < 25; ++i)
 		{
-			valtage[i] = (2.27f * 3.3f * adcConvertedDataBuffer[i])/4095.0f;
+			valtage[i] = (VOLTAGE_DIVIDER_CONSTANT * 3.3f * adcConvertedDataBuffer[i])/1023.0f;
 		}
 
 		LL_DMA_ClearFlag_HT1(DMA1);
@@ -222,7 +222,7 @@ void DMA1_Channel1_IRQHandler(void)
 	{
 		for(int i = 25; i < ADC_DMA_BUFFER_SIZE; ++i)
 		{
-			valtage[i] = (2.27f * 3.3f * adcConvertedDataBuffer[i])/4095.0f;
+			valtage[i] = (VOLTAGE_DIVIDER_CONSTANT * 3.3f * adcConvertedDataBuffer[i])/1023.0f;
 		}
 
 		LL_DMA_ClearFlag_TC1(DMA1);
